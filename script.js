@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add click event listeners to navigation links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Check if it's an external link (gallery.html)
+            if (href.includes('.html')) {
+                // Allow default behavior for external links
+                return;
+            }
+            
             e.preventDefault();
             
             // Remove active class from all links
@@ -39,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             // Get target section
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = href.substring(1);
             const targetSection = document.getElementById(targetId);
             
             if (targetSection) {
@@ -52,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Update active link on scroll
-    window.addEventListener('scroll', updateActiveNavLink);
-    
-    // Update active link on page load
-    updateActiveNavLink();
+    // Update active link on scroll (only for index page)
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink();
+    }
 });
 
 // Smooth scrolling for all anchor links
