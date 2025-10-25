@@ -208,3 +208,74 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Mobile menu toggle functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navigation = document.querySelector('.navigation');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (mobileMenuToggle && navigation) {
+        mobileMenuToggle.addEventListener('click', function() {
+            navigation.classList.toggle('active');
+            
+            // Toggle hamburger icon
+            const icon = this.querySelector('span');
+            if (navigation.classList.contains('active')) {
+                icon.textContent = '✕';
+            } else {
+                icon.textContent = '☰';
+            }
+        });
+        
+        // Close mobile menu when clicking on nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navigation.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('span');
+                icon.textContent = '☰';
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navigation.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                navigation.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('span');
+                icon.textContent = '☰';
+            }
+        });
+    }
+});
+
+// Responsive image loading optimization
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img');
+    
+    // Add loading="lazy" to all images for better performance
+    images.forEach(img => {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
+});
+
+// Touch-friendly interactions for mobile
+document.addEventListener('DOMContentLoaded', function() {
+    // Add touch class to body for touch device detection
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add('touch-device');
+    }
+    
+    // Improve touch interactions
+    const touchElements = document.querySelectorAll('.portfolio-item, .service-card, .cta-button');
+    touchElements.forEach(element => {
+        element.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        
+        element.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
+});
