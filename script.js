@@ -125,39 +125,57 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(this);
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
             const message = this.querySelector('textarea').value;
-            
+
             // Basic validation
             if (!name || !email || !message) {
                 alert('Please fill in all required fields.');
                 return;
             }
-            
+
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert('Please enter a valid email address.');
                 return;
             }
-            
-            // Simulate form submission
+
+            // Submit to Formspree
             const submitButton = this.querySelector('button[type="submit"]');
             const originalText = submitButton.textContent;
-            
+
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
-            
-            setTimeout(() => {
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 2000);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(async (response) => {
+                    if (response.ok) {
+                        alert('Thank you for your message! I will get back to you soon.');
+                        this.reset();
+                    } else {
+                        const data = await response.json().catch(() => null);
+                        const errorMsg = data && data.errors && data.errors.length
+                            ? data.errors.map(e => e.message).join(', ')
+                            : 'Something went wrong sending your message. Please try again later.';
+                        alert(errorMsg);
+                    }
+                })
+                .catch(() => {
+                    alert('Network error. Please check your connection and try again.');
+                })
+                .finally(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                });
         });
     }
 });
