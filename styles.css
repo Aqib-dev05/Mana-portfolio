@@ -246,6 +246,7 @@ body {
 .hero-image-container {
   position: relative;
   z-index: 3;
+  
 }
 
 .hero-image {
@@ -253,6 +254,7 @@ body {
   height: 500px;
   object-fit: cover;
   border-radius: 20px;
+  transition: .3s ease;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
@@ -327,6 +329,7 @@ body {
 
 .service-card {
   text-align: center;
+  cursor: pointer;
   padding: 40px 20px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 15px;
@@ -335,9 +338,39 @@ body {
   transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
+.service-card:hover .service-icon {
+  animation: shake .4s ease;
 }
+.service-card:hover{
+  box-shadow: 1px 1px 20px purple;
+
+}
+
+
+ @keyframes shake{
+  
+  0%{
+    rotate: 0deg;
+  }
+  25%{
+    rotate: 8deg;
+
+  }
+  50%{
+    rotate: -8deg;
+
+  }
+  75%{
+    rotate: 8deg;
+
+  }
+  100%{
+    rotate: 0deg;
+
+  }
+
+
+ }
 
 .service-icon {
   width: 60px;
@@ -427,9 +460,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover {
-  transform: scale(1.05);
-}
 
 .portfolio-image {
   width: 100%;
@@ -438,23 +468,7 @@ body {
   transition: filter 0.3s ease;
 }
 
-.portfolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 0, 255, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-.portfolio-item:hover .portfolio-overlay {
-  opacity: 1;
-}
 
 .overlay-content {
   display: flex;
@@ -528,6 +542,9 @@ body {
   border-radius: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  &:hover{
+    box-shadow: 0px 0px 16px purple;
+  }
 }
 
 .form-group {
@@ -1318,6 +1335,9 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .hero-content{
+    padding-top: 2.5rem;
+  }
 
   .cta-button {
     min-height: 44px;
@@ -1380,3 +1400,4 @@ html {
     color: black;
   }
 }
+

@@ -130,7 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = new FormData(this);
             const name = this.querySelector('input[type="text"]').value;
             const email = this.querySelector('input[type="email"]').value;
-            const phone = this.querySelector('input[type="tel"]').value;
             const message = this.querySelector('textarea').value;
             
             // Basic validation
@@ -164,19 +163,19 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Add loading animation for images
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const images = document.querySelectorAll('img');
     
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
+//     images.forEach(img => {
+//         img.addEventListener('load', function() {
+//             this.style.opacity = '1';
+//         });
         
-        // Set initial opacity
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
-    });
-});
+//         // Set initial opacity
+//         img.style.opacity = '0';
+//         img.style.transition = 'opacity 0.3s ease';
+//     });
+// });
 
 // Add intersection observer for animations
 document.addEventListener('DOMContentLoaded', function() {
