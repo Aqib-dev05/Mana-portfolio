@@ -1,274 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery - Abdul Rehman Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="gallery.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Header / Navigation -->
     <header class="header">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-text">AB</span>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span>☰</span>
-            </button>
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="index.html#services" class="nav-link">Services</a></li>
-                    <li><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact Me</a></li>
-                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
-                </ul>
-            </nav>
+      <div class="container">
+        <div class="logo">
+          <span class="logo-text">AB</span>
         </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span>☰</span>
+        </button>
+        <nav class="navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li>
+              <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="index.html#contact" class="nav-link">Contact Me</a>
+            </li>
+            <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Gallery Hero Section -->
     <section class="gallery-hero">
-        <div class="gallery-hero-background">
-            <div class="organic-shape shape-1"></div>
-            <div class="organic-shape shape-2"></div>
-            <div class="organic-shape shape-3"></div>
-            <div class="organic-shape shape-4"></div>
+      <div class="gallery-hero-background">
+        <div class="organic-shape shape-1"></div>
+        <div class="organic-shape shape-2"></div>
+        <div class="organic-shape shape-3"></div>
+        <div class="organic-shape shape-4"></div>
+      </div>
+      <div class="container">
+        <div class="gallery-hero-content">
+          <h1 class="gallery-title">My Creative Gallery</h1>
+          <p class="gallery-subtitle">
+            A collection of my finest design work and creative projects
+          </p>
         </div>
-        <div class="container">
-            <div class="gallery-hero-content">
-                <h1 class="gallery-title">My Creative Gallery</h1>
-                <p class="gallery-subtitle">A collection of my finest design work and creative projects</p>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Gallery Filter Section -->
     <section class="gallery-filters">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web-design">Web Design</button>
-                <button class="filter-btn" data-filter="mobile-app">Mobile App</button>
-                <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
-                <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
-            </div>
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web-design">
+            Web Design
+          </button>
+          <button class="filter-btn" data-filter="mobile-app">
+            Mobile App
+          </button>
+          <button class="filter-btn" data-filter="graphic-design">
+            Graphic Design
+          </button>
+          <button class="filter-btn" data-filter="branding">Branding</button>
+          <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
         </div>
+      </div>
     </section>
 
     <!-- Gallery Grid Section -->
     <section class="gallery-section">
-        <div class="gallery-background">
-            <div class="organic-shape shape-5"></div>
-            <div class="organic-shape shape-6"></div>
-        </div>
-        <div class="container">
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Web Design Images -->
-                <div class="gallery-item" data-category="web-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8b6ef3?w=600&h=400&fit=crop" alt="Web Design Project 1" class="gallery-image" type="web-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>E-Commerce Website</h3>
-                                <p>Modern responsive design</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
+      <div class="gallery-background">
+        <div class="organic-shape shape-5"></div>
+        <div class="organic-shape shape-6"></div>
+      </div>
+      <div class="container">
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Web Design Images -->
+          <div class="gallery-item" data-category="web-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1467232004584-a241de8b6ef3?w=600&h=400&fit=crop"
+                alt="Web Design Project 1"
+                class="gallery-image"
+                type="web-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>E-Commerce Website</h3>
+                  <p>Modern responsive design</p>
+                  <button class="view-btn">View Details</button>
                 </div>
-
-                <div class="gallery-item" data-category="web-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Web Design Project 2" class="gallery-image" type="web-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Corporate Website</h3>
-                                <p>Professional business design</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile App Images -->
-                <div class="gallery-item" data-category="mobile-app">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="Mobile App Design 1" class="gallery-image" type="mobile-app">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Fitness App</h3>
-                                <p>Health & wellness mobile app</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="mobile-app">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Mobile App Design 2" class="gallery-image" type="mobile-app">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Banking App</h3>
-                                <p>Secure financial application</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Graphic Design Images -->
-                <div class="gallery-item" data-category="graphic-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=400&fit=crop" alt="Graphic Design 1" class="gallery-image" type="graphic-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Poster Design</h3>
-                                <p>Creative poster artwork</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="graphic-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=600&h=400&fit=crop" alt="Graphic Design 2" class="gallery-image" type="graphic-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Logo Design</h3>
-                                <p>Modern brand identity</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Branding Images -->
-                <div class="gallery-item" data-category="branding">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop" alt="Branding Project 1" class="gallery-image" type="branding">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Brand Identity</h3>
-                                <p>Complete brand package</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="branding">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop" alt="Branding Project 2" class="gallery-image" type="branding">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Business Cards</h3>
-                                <p>Professional stationery</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- UI/UX Images -->
-                <div class="gallery-item" data-category="ui-ux">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop" alt="UI/UX Design 1" class="gallery-image" type="ui-ux">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Dashboard Design</h3>
-                                <p>User interface mockup</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ui-ux">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=600&h=400&fit=crop" alt="UI/UX Design 2" class="gallery-image" type="ui-ux">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>App Interface</h3>
-                                <p>Mobile app wireframes</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Additional Images -->
-                <div class="gallery-item" data-category="web-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Web Design Project 3" class="gallery-image" type="web-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Portfolio Website</h3>
-                                <p>Creative portfolio design</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="graphic-design">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=400&fit=crop" alt="Graphic Design 3" class="gallery-image" type="graphic-design">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Flyer Design</h3>
-                                <p>Marketing materials</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="mobile-app">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" alt="Mobile App Design 3" class="gallery-image" type="mobile-app">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>Social Media App</h3>
-                                <p>Community platform</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="ui-ux">
-                    <div class="gallery-image-container">
-                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop" alt="UI/UX Design 3" class="gallery-image" type="ui-ux">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <h3>E-Learning Platform</h3>
-                                <p>Educational interface</p>
-                                <button class="view-btn">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="gallery-item" data-category="web-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+                alt="Web Design Project 2"
+                class="gallery-image"
+                type="web-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Corporate Website</h3>
+                  <p>Professional business design</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile App Images -->
+          <div class="gallery-item" data-category="mobile-app">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+                alt="Mobile App Design 1"
+                class="gallery-image"
+                type="mobile-app"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Fitness App</h3>
+                  <p>Health & wellness mobile app</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mobile-app">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+                alt="Mobile App Design 2"
+                class="gallery-image"
+                type="mobile-app"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Banking App</h3>
+                  <p>Secure financial application</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graphic Design Images -->
+          <div class="gallery-item" data-category="graphic-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=400&fit=crop"
+                alt="Graphic Design 1"
+                class="gallery-image"
+                type="graphic-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Poster Design</h3>
+                  <p>Creative poster artwork</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="graphic-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1557683316-973673baf926?w=600&h=400&fit=crop"
+                alt="Graphic Design 2"
+                class="gallery-image"
+                type="graphic-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Logo Design</h3>
+                  <p>Modern brand identity</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Branding Images -->
+          <div class="gallery-item" data-category="branding">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop"
+                alt="Branding Project 1"
+                class="gallery-image"
+                type="branding"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Brand Identity</h3>
+                  <p>Complete brand package</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="branding">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop"
+                alt="Branding Project 2"
+                class="gallery-image"
+                type="branding"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Business Cards</h3>
+                  <p>Professional stationery</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI/UX Images -->
+          <div class="gallery-item" data-category="ui-ux">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop"
+                alt="UI/UX Design 1"
+                class="gallery-image"
+                type="ui-ux"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Dashboard Design</h3>
+                  <p>User interface mockup</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ui-ux">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=600&h=400&fit=crop"
+                alt="UI/UX Design 2"
+                class="gallery-image"
+                type="ui-ux"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>App Interface</h3>
+                  <p>Mobile app wireframes</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Images -->
+          <div class="gallery-item" data-category="web-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+                alt="Web Design Project 3"
+                class="gallery-image"
+                type="web-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Portfolio Website</h3>
+                  <p>Creative portfolio design</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="graphic-design">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=400&fit=crop"
+                alt="Graphic Design 3"
+                class="gallery-image"
+                type="graphic-design"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Flyer Design</h3>
+                  <p>Marketing materials</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mobile-app">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+                alt="Mobile App Design 3"
+                class="gallery-image"
+                type="mobile-app"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>Social Media App</h3>
+                  <p>Community platform</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="ui-ux">
+            <div class="gallery-image-container">
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop"
+                alt="UI/UX Design 3"
+                class="gallery-image"
+                type="ui-ux"
+              />
+              <div class="gallery-overlay">
+                <div class="overlay-content">
+                  <h3>E-Learning Platform</h3>
+                  <p>Educational interface</p>
+                  <button class="view-btn">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">
-                All rights reserved <span class="highlight">Abdul Rehman</span>, 2025
-            </p>
-        </div>
+      <div class="container">
+        <p class="footer-text">
+          All rights reserved <span class="highlight">Abdul Rehman</span>, 2025
+        </p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="gallery.js"></script>
-</body>
+  </body>
 </html>
